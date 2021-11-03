@@ -2,8 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { toast } from 'react-toastify'
 
 const Home: NextPage = () => {
+  const notify = () => toast("Wow so easy!");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <button onClick={notify}>notify</button>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
